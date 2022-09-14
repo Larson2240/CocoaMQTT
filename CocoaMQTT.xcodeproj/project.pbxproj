@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A6E408728D1E5040020469F /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 0A6E408628D1E5040020469F /* CocoaAsyncSocket */; };
+		0A6E408A28D1E5170020469F /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 0A6E408928D1E5170020469F /* Starscream */; };
 		1111248C24BB515E00E2DFBC /* CocoaMQTT.h in Headers */ = {isa = PBXBuildFile; fileRef = 040997711C1B1070006B5A6D /* CocoaMQTT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1111248E24BB515E00E2DFBC /* CocoaMQTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409977A1C1B1529006B5A6D /* CocoaMQTT.swift */; };
 		1111248F24BB515E00E2DFBC /* FrameConnAck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43DE4D22FAEC6700D9A06B /* FrameConnAck.swift */; };
@@ -141,10 +143,8 @@
 		9228E8D127610AA400063DF2 /* MqttConnectProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228E8CD27610AA400063DF2 /* MqttConnectProperties.swift */; };
 		9228E8D227610AA400063DF2 /* MqttConnectProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228E8CD27610AA400063DF2 /* MqttConnectProperties.swift */; };
 		9228E8D327610AA400063DF2 /* MqttConnectProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9228E8CD27610AA400063DF2 /* MqttConnectProperties.swift */; };
-		929A468927611DAE0046F6C5 /* CocoaAsyncSocket.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929A468727611DAE0046F6C5 /* CocoaAsyncSocket.xcframework */; };
 		929A468A27611DAE0046F6C5 /* CocoaAsyncSocket.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929A468727611DAE0046F6C5 /* CocoaAsyncSocket.xcframework */; };
 		929A468B27611DAE0046F6C5 /* CocoaAsyncSocket.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929A468727611DAE0046F6C5 /* CocoaAsyncSocket.xcframework */; };
-		929A468C27611DAE0046F6C5 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929A468827611DAE0046F6C5 /* Starscream.xcframework */; };
 		929A468D27611DAE0046F6C5 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929A468827611DAE0046F6C5 /* Starscream.xcframework */; };
 		929A468E27611DAE0046F6C5 /* Starscream.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929A468827611DAE0046F6C5 /* Starscream.xcframework */; };
 /* End PBXBuildFile section */
@@ -283,8 +283,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				929A468927611DAE0046F6C5 /* CocoaAsyncSocket.xcframework in Frameworks */,
-				929A468C27611DAE0046F6C5 /* Starscream.xcframework in Frameworks */,
+				0A6E408728D1E5040020469F /* CocoaAsyncSocket in Frameworks */,
+				0A6E408A28D1E5170020469F /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +515,10 @@
 			dependencies = (
 			);
 			name = "iOS CocoaMQTT";
+			packageProductDependencies = (
+				0A6E408628D1E5040020469F /* CocoaAsyncSocket */,
+				0A6E408928D1E5170020469F /* Starscream */,
+			);
 			productName = CocoaMQTT;
 			productReference = 8225B532227C2E8700E4DB51 /* CocoaMQTT.framework */;
 			productType = "com.apple.product-type.framework";
@@ -573,6 +577,10 @@
 				Base,
 			);
 			mainGroup = 040997051C1B0B96006B5A6D;
+			packageReferences = (
+				0A6E408528D1E5040020469F /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */,
+				0A6E408828D1E5170020469F /* XCRemoteSwiftPackageReference "Starscream" */,
+			);
 			productRefGroup = 040997101C1B0B96006B5A6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1151,6 +1159,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1199,6 +1208,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1331,6 +1341,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A6E408528D1E5040020469F /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Larson2240/CocoaAsyncSocket";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		0A6E408828D1E5170020469F /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A6E408628D1E5040020469F /* CocoaAsyncSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A6E408528D1E5040020469F /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */;
+			productName = CocoaAsyncSocket;
+		};
+		0A6E408928D1E5170020469F /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A6E408828D1E5170020469F /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 040997061C1B0B96006B5A6D /* Project object */;
 }
